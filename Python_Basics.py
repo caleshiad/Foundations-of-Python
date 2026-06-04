@@ -159,3 +159,21 @@ total += 2 #This is the same as total = total + 2, so total will now be 10
 total *= 3 #This is the same as total = total * 3, so total will now be 30
 print(total) #Output will be 30
 
+#Logical operators let Python combine conditions, which allows complex decision making in code 
+#Logical operators return a boolean result of True or False based on the conditions being evaluated
+#The main logical operators are: and, or, and not
+#and returns True if both conditions are true, otherwise it returns False
+
+#Comparison, Logic, and Precedence Lab
+#TODO: Create two variables
+a = 10
+b = 5
+#TODO: Compare the rwo variables and print the result
+print(a > b)
+#TODO: Update one variable using an assignment operator
+a += 3
+print(a)
+#TODO: Use logic operators to combine comparisons
+result = (a > b) and (b < 10)
+#TODO: Print the final result
+print(result)
