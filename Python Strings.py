@@ -96,3 +96,15 @@ print(parts)
 words = ["The", "quick", "brown", "fox"]
 sentence = " ".join(words)
 print(sentence)
+
+# the strip() method is used to remove unwanted whitespace from the beginning and end of a string
+# strip() removes leading left side and trailing white side whitespace
+# whitespace includes spaces, tab(\t) and newline characters(\n)
+# strip() creates a new string while the original string remains unchanged
+text = "  Hello, world!"
+cleaned = text.strip()
+print(cleaned)
+
+#strip() can be used to remove specific characters 
+message = "***Welcome***"
+print(message.strip("*"))
