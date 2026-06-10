@@ -39,7 +39,19 @@ class_sizes = ["31", "33", "31", "33", "35", "31"]
 class_sizes.remove("31")
 print(class_sizes)
 
-# Left off @ Finding the number of items in a collection
+# the len() function is used to find the number of items in a collection
+# when using len() with a list it tells us how many items the list contains
+buses = ["Bus One", "Bus Two", "Bus Three", "Bus Four", "Bus Five"]
+amount_of_buses = len(buses)
+print(amount_of_buses) 
+
+# Use len() to retrieve the last item in a list by using its length to calculate the final index
+after_school = ["Erin", "Jessica", "Monica", "Jesse", "Luke", "Caleb", "Aaron"]
+last_index = len(after_school) -1
+last_student = after_school[last_index]
+print(last_student)
+
+# left off @ append in 6.4 of chapter, second to last concept
 
 # Dictionaries store information using key-value pairs inside {} 
 # Each key in a dictionary is linked to a specific value
