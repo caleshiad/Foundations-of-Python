@@ -51,7 +51,25 @@ last_index = len(after_school) -1
 last_student = after_school[last_index]
 print(last_student)
 
-# left off @ append in 6.4 of chapter, second to last concept
+# append() adds a new item to the end of the list
+# append() changes the original list instead of creating a new one
+# syntax is list_name.append(value)
+new_students = ["Ravi", "Justin", "Emma"]
+print(new_students)
+new_students.append("Erica")
+print(new_students)
+
+# sort() arranges items in a list in a specific order
+# strings are sorted alphabetically, numbers from smallest to largest
+# sort() changes the original list instead of creating a new one
+# cannot sort mized data types
+
+test_scores = ["77", "82", "95", "80", "61", "92", "84"]
+test_scores.sort()
+print(test_scores) #this will be in ascending order
+
+test_scores.sort(reverse=True) #this will be in ascending order
+print(test_scores)
 
 # Dictionaries store information using key-value pairs inside {} 
 # Each key in a dictionary is linked to a specific value
