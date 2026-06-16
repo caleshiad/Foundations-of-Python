@@ -74,8 +74,63 @@ print(test_scores)
 # Dictionaries store information using key-value pairs inside {} 
 # Each key in a dictionary is linked to a specific value
 # Dictionaries enable you to label and access data clearly 
+#Dicitionaries are mutable (items can be added, changed or removed)
+#Keys must be immutable types like strings, numbers, or tuples, values can be any date type
 student_ids = {"Rodney: 323435", "Jessica: 741957", "Melissa: 182057", "Noah:472946", "Roberto: 293572", "Kelly:004284", "Isaac:694572"}
 print(student_ids)
+
+# get() is used retireve the value for a specified key 
+# if a key is missing it returns "None" 
+profile = {"name": "Jessica", "dob": "01/24/2013", "sex": "F", "student_id": "741957", "attendance" : "absent"}
+profile["attendance"] = "present" #the key value for attendance is updated to present
+print(profile["attendance"])
+dob = profile.get("dob") 
+print(dob)
+print(profile.get("name")) # this is how get() is used to retrieve a value for a key
+
+# keys() shows you all of the keys that exist in a dictionary, not their actual values
+# updates automatically if the dictionary changes 
+# used when you want to loop through keys or see what info a dictionary stores 
+print(profile.keys()) # will print all of the keys in profile 
+
+# values() shows all of the values in the dictionary 
+print(profile.values()) # will print the values in profile
+
+# items() will show all of the key value pairs in a dictionary 
+print(profile.items()) # will print all of the items in profile
+
+# Modifying Python Dictionaries 
+
+# add/modify dictionary elements by assigning a value to a key using square brackets, if key already exists its value will be updated
+# remember Python is case sensitive, if you are updating pay attention to lower/upper case
+lion = {"firstname": "Alex", "lastname": "The Lion", "Origin": "NYC", "Location": "NYC", "Nickname": "The King of New York"}
+print(lion.items())
+lion["Location"] = "Madagascar"
+print(lion.items())
+
+# update() is used to add or modify dictionary elements by passing another dictionary or key-value pairs to it
+# if a value already exists it's just replaced
+attendance = {"Rodney": "Present", "Jessica": "Absent", "Andreas": "Present", "Roberto": "Absent", "Skyler": "Present"}
+print(attendance.items())
+attendance.update({"Rodney": "Absent"})
+print(attendance)
+
+# items can be removed using the "del" keyword 
+info = {"name": "Alex", "age": "20", "role": "student", "favorite_color": "red"}
+del info ["favorite_color"] # this is the syntax for using del to remove items from a list
+print(info)
+
+# pop() is another way to remove items 
+# give pop() the key you want to remove and it will delete the key-value pair and return the value that wa removed allowing you to store it or use it immediately
+asset_tag = {"device_name": "HP1234", "serial_number": "AFFE3422331", "assigned_user": "M.Scott"}
+removed_value = asset_tag.pop("assigned_user")
+print(removed_value)
+print(asset_tag)
+# if the value you are targetting does not exist pop() will return a KeyError unless a default value is given 
+
+
+
+
 
 # Tuples are ordered collections of items stored inside ()
 # Tuples cannot be changed after creation 
