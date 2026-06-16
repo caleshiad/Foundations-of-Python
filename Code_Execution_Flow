@@ -1,0 +1,76 @@
+# Python if-else Statements
+
+# if statements check if a specific condition is true and run the code if it is
+if 10 > 5: # the if condition
+    print("This condition is true.") # this code has to be indented
+
+# logical operators can be used to evaluate wheter a statement is true ( ==, !=, <, <=, >, >=)
+
+# if-else statements choose a path depending on whether the condition is true OR false
+# if-else statements are used to allow programs to make decisions by testing conditions, which allows the program to behave differently based on changing information
+if 3 >= 6:
+    print("This condition is true.") # code to run when the condition is true, must be indented
+else:                                
+    print("This condition is false.") # code to run when the condition is false, must be indented
+
+# Variable Storing the server status
+server_online = True
+
+# Evaluate the condition and perform an if-else
+if server_online == False:
+    print("The server is operating normally.")
+else:
+    print("The server is offline. Please investigate the issue.")
+
+# Conditional statements include if, elif, and else. They help control the program's flow.
+# using variables with the if conditional statement allows a program to be flexible by making decisions based off changing information
+# the if statement will check the most recently stored value for the variable 
+# this allows the program to behave differently without altering the code 
+
+minutes_exercised = int(input("How many minutes did you exercise today?")) #the output changes based on the users input 
+if minutes_exercised >= 60:
+    print("Well done! You've hit the daily amount of exercise needed.")
+else:
+    print("You are below the daily minimum for daily exercise minutes.")  
+
+
+points = int(input("User Points:"))
+if points > 150:
+    print("Congratulations! You may unlock the reward")
+    points = points - 150
+    print("New Points Balance:", points)
+else:
+    print("Sorry, you don't have enough points for the reward right now.")
+    points_needed = 150 - points 
+    print (f" You need {points_needed} more points to unlock the reward.")
+
+
+# elif means else if
+# elif checks additional conditions after an initial if statement, if the first if is false it moves to the elif condition and tests it
+# multiple elif statements can be used in a row 
+
+temperature = 75 
+if temperature > 85:
+    print("It's hot outside.")
+elif temperature > 60: 
+    print("It's warm outside.")
+else:
+    print("It's cool outside.")
+
+
+# Flowcharts are useful for when multiple decisions need to be considered, which translates over to if-elif-else statements
+# Consider the logic of your if-elif-else statements by thinking about the conditions in order, start with the most specific or simplest requirement
+
+user_age = int(input("How old are you?"))
+if user_age <= 12:
+    print("You are a child.")
+elif user_age == 13:
+    print("You are a preteen.")
+elif 18 > user_age > 13:
+    print("You are a teenager.")
+elif 65 > user_age >= 18:
+    print("You are an adult.")
+else:
+    print("You are a senior citizen.")
+
+# left off @ section 7.5 Python While Loops beginning of section
