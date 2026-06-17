@@ -123,4 +123,79 @@ for num in numbers:
         print("Found a value less than 30:", num)
 # the script creates a list of numbers and looks through each value one at a time using a loop, when it finds a number that is less than 30 it prints the message showing the value was found
 
-# left off @ variable portion of section 7.7 
+# the variable in a for loop is a placeholder that temporarily stores each item from the iterable as the loop runs
+# during each iteration the loop assigns the next item in the sequence to that variable, allowing the code inside the loop to use it
+# the variable can be defined for the first time in the for loop header, if a variable with the same name already exists the loop will reuse and update it during each iteration
+# the variable only takes on one value at a time and changes automatically as the loop progresses 
+
+item = "placeholder"
+for item in ["apple", "banana", "cherry", "strawberry", "kiwi"]:
+    print(item)
+
+# the iterable in a for loop is the collection ot sequence that the loop goes through one item at a time (string, tuple, dictionary, range, or any object that can return items in sequence)
+# break is a keyword used to stop a loop early before it would finish on its own
+# break ends the loop and advances the program to the line following the loop
+
+# break should be used when: 
+# find what you're looking for and no longer need to continue the loop 
+# a specific condition makes continuing unnecessary or incorrect 
+# you want to exit a loop as soon as a problem or invalid value is detected 
+
+numbers = [3, 7, 12, 5, 9]
+for num in numbers:
+    if num > 10:
+        print("Found a number greater than 10:", num)
+        break
+    # the loop will stop immediately when a number greater than 10 is found
+
+# continue is a keywork that skips the rest of the current loop and moves to the next iteration 
+# when python sees continue inside of a for or while loop it stops executing any remaining code in that loop for that cycle and jumps back to the top of the loop to check the next value or condition 
+
+for number in range (5):
+    if number == 2:
+        continue
+    print(number)  
+# when number == 2 the contunue statement runs to print(number) is skipped for that iteration, the loop continues with the next value
+# continue skips one loop cycle without stopping the entire loop 
+
+numbers = [2, 4, 6, 8]
+for num in numbers:
+    doubled = num * 2
+    print("Original:", num, "Doubled:", doubled)
+# this loop retrieves each number from the list, calculates its doubled value and prints the original and the result
+
+# Use a Loop to Manipulate a List 
+
+numbers = [1, 2, 3, 4]
+squares = []
+
+for num in numbers:
+    squares.append(num**2)
+
+print("Original:", numbers)
+print("Squared:", squares)
+# the loop goes through each number, doubles it, and stores the result in a new list 
+
+# update an existing list instead of creating a new one
+
+grades = [88, 84, 92] 
+print("original grades:", grades) # prints the original list so you can see starting values
+for i in range (len(grades)):     # for loop uses range (len(grades)) to loop through index positions of the list
+    grades[i] = grades[i] + 5     # inside the loop each grade is increased by 5 and stored back into the same position in the list, which updates the original list instead of making a new one
+print("new grades:", grades)      # the updated list is printed after the loop finishes
+
+# Using a for loop to iterate through a Dictionary 
+
+student_grades = {"Alice": 90, "Bob": 85, "Carlos": 78}
+for name in student_grades:
+    grade = student_grades[name]
+    print(name, "has a grade of", grade)
+
+# Using Dictionary Pairs
+
+fees = {"registration": 25.00, "lab": 40.50, "technology": 15.25}
+for fee in fees: 
+    fees[fee] = fees[fee] + 0.75
+print(fees)
+# this script increases every value in the dictionary by 0.75 and then prints the updated dictionary 
+
