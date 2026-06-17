@@ -73,4 +73,54 @@ elif 65 > user_age >= 18:
 else:
     print("You are a senior citizen.")
 
-# left off @ section 7.5 Python While Loops beginning of section
+# a loop is a programming structure that repeats a block of code multiple times as long as a specified condition remains true or it cycles through items in a sequence 
+# allows the same instructions to run repeatedly without requiring the code to be rewritten each time 
+
+# 2 types of loops in Python: 
+# while loop 
+# for loop 
+
+# a while loop repeats code as long as a condition remains true 
+# used when the number of reptitions is not known in advance and depends on something changing during the program
+count = 1
+while count <= 3:
+    print("Hello")
+    count = count + 1
+# the loop prints Hello 3 times b/c it repeats as long as count is less than or equal to 3
+
+# a for loop repeats code for every item in a sequence such as a list, string, or range
+for item in [1, 2, 3]:
+    print(item) #the loop goes through each number in the list and prints it
+
+# this script outputs the numbers 1-10 and then stops at 10
+number = 1
+while number <= 10:
+    print(number)
+    number = number + 1
+
+countdown = 5                                   # this is your starting number
+while countdown > 0:                            # this begins the while loop
+    print("Counting down:", countdown)          # this line runs each time the loop is repeated
+    countdown = countdown - 1                   # this line runs during each repititon and decreases the countdown value by 1 moving the loop closer to stopping
+print("Blast Off!")                             # this line runs after the loop ends b/c the condition countdown > 0 becomes False
+
+
+# This script tracks the number of login attempts before a user account is locked 
+
+#Variable representing remaining login attempts
+remaining_attempts = 3
+
+#While loop that runs as long as attempts remain
+while remaining_attempts > 0:
+    print("Remainging login attempts:", remaining_attempts)
+    remaining_attempts = remaining_attempts - 1
+print("Account locked due to too many failed login attempts")
+
+# define the loop variable during the for loop instead of before it to keep code clear and avoid unexpected overwriting of existing variables
+numbers = [45, 62, 18, 90, 33]
+for num in numbers: 
+    if num < 30:
+        print("Found a value less than 30:", num)
+# the script creates a list of numbers and looks through each value one at a time using a loop, when it finds a number that is less than 30 it prints the message showing the value was found
+
+# left off @ variable portion of section 7.7 
