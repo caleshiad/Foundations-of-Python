@@ -107,3 +107,66 @@ def double_number(x):
 
 double_number(5)
 
+# Algorithms thinking focuses on identifying inputs, actions, and outputs and arranging those actions in a logical sequence to solve a problem
+# Solving a problem algorithmically begins with understanding the goal and inputs, organizing the required actions in order, planning the logic clearly, and then implementing it in code
+# Flowcharts are helpful for solving problems algorithmically 
+
+# Writing a Functional Program
+# Identify the problem and potential solutions.
+# Devise the algorithm (using pseudocode).
+# Use flowcharts to visualize algorithms and validate the solution.
+# Convert pseudocode to code ( go from plain language to actual code)
+# Test and debug (verify that the program works like it should )
+
+# Create a program that calculates weekly pay
+
+hourly_pay = float(input("How much do you get paid per hour? Your answer should be to the hundreths value ex: $xx.xx \n $"))
+daily_hours = float(input("How many hours do you work per day?"))
+days_week = int(input("How many days do you work per week?"))
+
+def weekly_pay():
+    week_pay = (hourly_pay * daily_hours) * days_week
+    print("Your weekly pay is: $", week_pay)
+
+weekly_pay()
+
+# Create a program that calculates the total price of items in a cart that each have a price 
+
+def calculate_total(prices):
+    total = 0
+    for price in prices:
+        total = total + price
+        total = round(total, 2) # this stops your value at the hundreths place when it prints the price instead of having a long decimal value
+        return total
+# Main Program 
+cart_prices = [5.99, 3.49, 12.99, 1.50, 21.99, 3.69, 4.00, 2.89]
+total_cost = calculate_total(cart_prices)
+print("The total cost is: ", total_cost)
+
+
+# Functional Program Criteria: 
+# Run w/o crashing 
+# Follow the algorithm or problem requirements exactly
+# Produce the correct output fot valid input
+# Handle different kinds of input appropriately
+# Use clear, readable code that is well organized and logical
+# Allow maintenance or future updates without significant confusion 
+# Handle exceptions or invalid inputs 
+
+# Sequence means that code runs in the exact order it was written from top to bottom
+# every program relies on sequence because each instruction must happen at the right time
+
+# Selection allows a program to make decisions, and is accomplished using conditional statements like if, elif, and else
+# the program checks a condition and executes a corresponding block of code based on whether the condition is true or false
+
+# Iteration means repeating actions, which is achieve using loops such as for and while
+# useful for when a task needs to be repeated multiple times, which replaces having to write the same code repeatedly
+
+# Good Coding Practices 
+# Use Meaningful Names  - choose variable, function, and file names that describe their purpose
+# Format Code for Readability - follow consistent indentation, spacing and line breaks so code is easy to read
+# Write Modular Code with Functions - break large tasks into smaller functions
+# Add Functional Documentation - use comments and docstrings to explain what a program does and why specific steps are necessary
+# Test Early and Test Often - run programs as you build them to catch mistakes before they spread 
+# Keep Code Simple - avoid writing overly complex code for no reason
+# Handle Errors Gracefully - anticipate possible problems such as incorrect input and guide the user with helpful messages
