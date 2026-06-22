@@ -1,0 +1,2 @@
+# Troubleshooting involves identifying the cause of a program's non functional behavior and resolving the issue. 
+# by reading the error message given, checking the code step-by-step, and testing small changes, most problems can be solved
