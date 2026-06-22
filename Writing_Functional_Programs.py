@@ -100,4 +100,10 @@ weekly_uptime = calculate_total_uptime(24, 24, 23, 24, 22)
 # Display the returned result
 print("Total weekly server uptime (hours:)", weekly_uptime)
 
-# left off @ beginning of section 8.3 Essential Practice
+# this defines a function that doubles any number inputted 
+def double_number(x):
+    result = x * 2
+    print(result)
+
+double_number(5)
+
